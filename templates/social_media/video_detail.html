@@ -1,0 +1,40 @@
+{% extends "social_media/base.html" %}
+{% load static %}
+{% block content %}
+<div class="video-detail-container">
+    <title>{{ video.title }}</title>
+    <div class="video-wrapper">
+        <video width="1280" height="720" controls>
+            <source src="{{ video.video.url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <hr class="separator">
+    <div class="caption_section">
+        <h2>Author: {{ video.author }}</h2>
+        <h2>Caption</h2>
+        <h3>{{ video.caption }}</h3>
+    </div>
+    <div class="add_comment"">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Add Comment</button>
+        </form>
+    </form> 
+    </div>
+    <div class="comment_section">
+        <h2>Comment Section</h2>
+        {% for i in comment %}
+        <div class="comment">
+            <div class="comment_user">
+                <img src="{% static 'profile_avs/no_image.png' %}" alt="Default Image" width="50">
+                <span class="author_name">{{ i.author.username }}</span>
+            </div>
+            <p class="comment_text">{{ i.text }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

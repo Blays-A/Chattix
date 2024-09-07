@@ -1,0 +1,15 @@
+{% extends "social_media/base.html" %}
+
+{% block content %}
+    <div class="profiles-container">
+        <h2>All User Profiles</h2>
+        <ul>
+            {% for profile in profiles %}
+                <li>
+                    <a href="{% url 'users:profile' profile.user.username %}">{{ profile.user.username }}</a> 
+                    - {{ profile.bio }} <!-- Или другой атрибут профиля -->
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

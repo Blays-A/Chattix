@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'social_media/base.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1>Yess</h1>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="{% url 'chat:home' %}">Home</a></li>
+            <li><a href="{% url 'social_media:all_videos' %}">Videos</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'social_media:new_video' user.id %}" >New Video</a></li>
+                <li><a href="{% url 'chat:room_list' %}">My Chat</a></li>
+                <li><a href="{% url 'users:profile' user.username %}">{{ user.username }}'s Profile</a>
+</li>
+                <li class="logout-form">
+                    <form method="post" action="{% url 'users:logout' %}">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            {% else %}
+                <li><a href="{% url 'users:register' %}">Register</a></li>
+                <li><a href="{% url 'users:login' %}">Log in</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

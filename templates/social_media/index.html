@@ -1,0 +1,20 @@
+{% extends "social_media/base.html" %}
+
+{% block content %}
+<div class="video-grid">
+    {% for i in video %}
+        <div class="video-item">
+            {%if i.img%}
+            <img src="{{ i.img.url }}" alt="{{ i.title }}">
+            {%endif%}
+            
+            <a href="{{ i.get_absolute_url }}">
+                <h3>{{ i.title }}</h3>
+            </a>
+
+
+    
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

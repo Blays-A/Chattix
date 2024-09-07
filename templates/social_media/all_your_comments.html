@@ -1,0 +1,18 @@
+{% extends "social_media/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="comments-container">
+        <h2>Your Comments</h2>
+        {% for i in comment  %}
+            <div class="comment-item">
+                <p class="comment-text">{{ i.text }}</p>
+                {% if i.video%}
+                <a href="{{ i.video.get_absolute_url }}">{{ i.video.title }}</a>
+                <a href="{% url 'social_media:del_comment' i.id%}" class="btn-fourth" >Delete</a>
+       
+                {%endif%}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

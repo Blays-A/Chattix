@@ -1,0 +1,568 @@
+/* Основные стили для навигации */
+/* Основные стили для навигации */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar-brand h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #ff9900;
+}
+
+.logout-form {
+    display: inline; /* Убедитесь, что форма отображается на одном уровне с другими ссылками */
+}
+
+.logout-form form {
+    margin: 0; /* Удаляет отступы у формы */
+}
+
+.logout-form button {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-form button:hover {
+    background-color: #cc0000;
+}
+
+
+
+
+
+/* Основные стили для контейнера списка комнат */
+/* Основные стили для контейнера списка комнат */
+.room-list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room-list-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стили для контейнера боксов */
+.room-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Стили для бокса комнаты */
+.room-box {
+    width: calc(33.333% - 20px); /* 3 бокса в ряд с учетом отступов */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.room-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.room-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.room-content p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 0;
+}
+
+.room-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* Стили для сетки видео */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-item h3 {
+    margin: 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.video-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* Основные стили для страницы профиля */
+.profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image {
+    flex: 1;
+    max-width: 350px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-details {
+    flex: 2;
+    max-width: 500px;
+}
+
+.profile-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.profile-details strong {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+/* General container styling */
+.video-detail-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video wrapper styling */
+.video-wrapper {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Separator styling */
+.separator {
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Caption section styling */
+.caption_section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.caption_section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.caption_section h3 {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Comment section styling */
+.comment_section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment_section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+/* Comment styling */
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.comment_user {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.comment_user img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment_user span {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment_text {
+    font-size: 1em;
+    color: #444;
+}
+
+.comment:last-of-type {
+    border-bottom: none;
+}
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Adjust color as needed */
+}
+
+
+
+
+/* Контейнер для формы */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form p {
+    margin-bottom: 15px;
+}
+
+.form-container form input, 
+.form-container form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-container form input[type="file"] {
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+/* Контейнер для формы */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form p {
+    margin-bottom: 15px;
+}
+
+.form-container form input, 
+.form-container form textarea,
+.form-container form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container form input[type="file"] {
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-third {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-fourth{
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+
+.delete_comment{
+    margin-left: 100px;
+}
+
+/* Контейнер для комментариев */
+.comments-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.comment-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-text {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.comment-item:nth-child(odd) {
+    background-color: #f1f1f1;
+}

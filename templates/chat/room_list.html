@@ -1,0 +1,19 @@
+{% extends "social_media/base.html" %}
+{% load static %}
+{% block content %}
+<div class="room-list-container">
+    <h2>Available Rooms</h2>
+    <div class="room-boxes">
+        {% for i in room %}
+            <div class="room-box">
+                <a href="{% url 'chat:room' i.room_name user.username %}" class="room-link">
+                    <div class="room-content">
+                        <h3>{{ i.room_name }}</h3>
+                        <p>Click to enter the room</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
